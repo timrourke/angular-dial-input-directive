@@ -1,0 +1,27 @@
+*, *::before, *::after {
+	box-sizing:border-box;
+}
+
+html, body {
+	height:100%;
+}
+
+body {
+	padding:0;
+	margin:0;
+}
+
+dial {
+	border: 10px solid #ccc;
+}
+
+dial::before {
+	content:'';
+	display:block;
+	position:absolute;
+	right:-9px;
+	top:85px;
+	height:10px;
+	width:8px;
+	background-color:red;
+}
