@@ -7,7 +7,8 @@
 	<script src="bower_components/angular/angular.min.js"></script>
 	<script src="app/ng-dial.js"></script>
 </head>
-<body>
-	<dial></dial>
+<body ng-controller="dialController">
+	<input class="dialIndicator" type="number" min="0" max="360" ng-model="dialAngle">
+	<dial angle="dialAngle"></dial>
 </body>
 </html>

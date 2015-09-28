@@ -19,9 +19,20 @@ dial::before {
 	content:'';
 	display:block;
 	position:absolute;
-	right:-9px;
 	top:85px;
-	height:10px;
-	width:8px;
+	right:-9px;
+	width:10px;
+	height:8px;
 	background-color:red;
+}
+
+.dialIndicator {
+	position: absolute;
+	top:50%;
+	left:50%;
+	transform:translateX(-50%) translateY(-50%);
+	z-index:10;
+	width:170px;
+	font-size:2em;
+	text-align:center;
 }
