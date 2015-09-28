@@ -3,8 +3,6 @@ controller('dialController', ['$scope', function($scope){
 
   $scope.dialAngle = 0;
 
-  //$scope.$watch(function())
-
 }]).
 directive('dial',['$document', '$window', '$timeout', function($document, $window, $timeout) {
   return {
@@ -32,7 +30,7 @@ directive('dial',['$document', '$window', '$timeout', function($document, $windo
       });
 
       scope.$watch('angle', function(newValue, oldValue){
-        updateAngle(newValue - startAngle + 180);
+        updateAngle(newValue - startAngle);
       });
 
       element.on('mousedown', function(event) {
@@ -50,7 +48,7 @@ directive('dial',['$document', '$window', '$timeout', function($document, $windo
         angle = Math.atan2(-(ctrY - y), -(ctrX - x)) * 180 / Math.PI + 180;
 
         scope.$apply(function(){
-          scope.angle = angle + startAngle - 180;
+          scope.angle = angle + startAngle;
         });
         
         updateAngle(angle);
@@ -63,7 +61,7 @@ directive('dial',['$document', '$window', '$timeout', function($document, $windo
 
       function updateAngle(angle) {        
         element.css({
-          transform: 'rotateZ(' + (angle - 180 + startAngle) + 'deg)'
+          transform: 'rotateZ(' + (angle + startAngle) + 'deg)'
         });
       }
     }

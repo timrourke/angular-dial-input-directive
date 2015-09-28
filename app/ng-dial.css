@@ -20,7 +20,7 @@ dial::before {
 	display:block;
 	position:absolute;
 	top:85px;
-	right:-9px;
+	left:-9px;
 	width:10px;
 	height:8px;
 	background-color:red;
