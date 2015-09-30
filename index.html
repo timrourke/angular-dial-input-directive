@@ -23,6 +23,16 @@
     <input type="text" class="heightIndicator" ng-model="dialHeight"/>
   </label>
 
+  <label>
+    Center of circle, X coord (px)
+    <input type="number" class="leftIndicator" ng-model="dialCenter.x"/>
+  </label>
+
+  <label>
+    Center of circle, Y coord (px)
+    <input type="number" class="topIndicator" ng-model="dialCenter.y"/>
+  </label>
+
   <h1>Resizable Ellipse Directive</h1>
 
   <p class="description">This Angular 1.x directive allows for a dynamically resizable ellipse to be drawn.</p>
@@ -31,6 +41,6 @@
 
   <p class="description">OR do neither, and simply use the magic of Angular's 2-way binding to explicitly set those values.</p>
 
-  <dial angle="dialAngle" ellipsewidth="dialWidth" ellipseheight="dialHeight"></dial>
+  <dial angle="dialAngle" ellipsewidth="dialWidth" ellipseheight="dialHeight" ellipsecenter="dialCenter"></dial>
 </body>
 </html>
