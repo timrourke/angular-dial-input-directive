@@ -88,8 +88,8 @@ directive('dial',['$document', '$window', '$timeout', function($document, $windo
       
       function changeEllipseHeight(event) {
         y = event.clientY;
-        x = element[0].offsetLeft + (element[0].clientWidth / 2);
-        ctrX = x;
+        x = event.clientX;
+        ctrX = element[0].offsetLeft + (element[0].clientWidth / 2);
         ctrY = element[0].offsetTop + (element[0].clientHeight / 2);
         ellipseheight = calcLinearDistance({x: x, y: y}, {x: ctrX, y: ctrY}) * 2;
         ellipsecenter = {
